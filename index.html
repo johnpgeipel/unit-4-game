@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+    <title>Crystals Collector Game</title>
+    <link rel="stylesheet" type="text/css" href="assets/css/reset.css"/>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+    <style>
+
+    @font-face {
+        font-family: Lois Cesarano;
+        src: url(assets/Lois Cesarano-bold.otf);
+        font-weight: bold;
+    }
+    h1 {
+        color: white;
+        font-size: 50px;
+        text-align: center;
+        font-family: Lois Cesarano;
+        letter-spacing: 20px;
+        
+
+    }
+        .doodle {
+            position: fixed;
+            z-index: -5;
+        }
+    
+            
+        
+
+        .header {
+            text-align: center;
+            font-size: 50px;
+            font-family:Arial, Helvetica, sans-serif;
+            font-weight: bolder;
+            font-style: italic;
+            letter-spacing: 60px;
+            line-height: 60px;
+            color: white;
+            padding-top: 30px;
+            text-shadow: 10px 10px 3px rgba(21, 13, 31, 0.842);
+        
+
+        }
+        .header {
+            opacity:0;
+            transition: opacity 2s;
+            -webkit-transition: opacity 2s;
+            margin-top: 25px;
+            text-align: center;
+        }
+        .container {
+            opacity:0;
+            transition: opacity 2s;
+            -webkit-transition: opacity 2s;
+        
+        }
+        .directions {
+            opacity:0;
+            transition: opacity 3s;
+            -webkit-transition: opacity 3s;
+        
+        }
+        
+        
+        
+        
+    </style>
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="assets/javascript/game.js"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+</head>
+<body>
+    
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/css-doodle/0.6.1/css-doodle.min.js"></script>
+
+        
+        
+        <css-doodle grid="5" class="doodle">
+                :doodle {
+                    @grid: 12 / 100vmax;
+                    background: #0a0c27;
+                    filter: blur(3.5px);
+                    transform: scale(1.1)
+                }
+
+                @shape: circle;
+                background: hsla(@index(), 50%, 60%, @rand(0.6));
+                transform:
+                    scale(@r(.2, 6.5))
+                    translate(@multi(2, @r(-50%, 50%)));
+
+
+
+                    
+               
+                
+                animation: test infinite @r(100s, 300s) linear;
+                
+                @keyframes test {
+                    0% {
+                        transform: translate3d(0, 0, 0);
+                    }
+                    50% {
+                        transform: translate3d(@r(-500%, 1000%), @r(-500%, 100%), 0);
+                    }
+                    100% {
+                        transform: translate3d(0, 0, 0);
+                    }
+                }
+                
+                
+        </css-doodle>
+
+        <div class="header text-center">
+            <h1>CRYSTALS COLLECTOR</h1>
+            <h3>MAGIC NUMBER:</h3>
+            <h3 id="magicNumber"></h3>
+        </div>
+        
+
+        <!-- <div id="helloworld">CRYSTALS<br>COLLECTOR
+        </div>
+        <h3>MAGIC NUMBER:</h3>
+        <h3 id="magicNumber"></h3> -->
+        
+        <div class="container">
+		
+                <div class="row">
+                    <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 text-center">
+                        <img class="crystalimg img-responsive" id="crystal1" src="assets/images/crystal1.png" alt="Crystal 1"/>
+                    </div>
+                    <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 text-center">
+                        <img class="crystalimg img-responsive" id="crystal2" src="assets/images/crystal2.png" alt="Crystal 2"/>
+                    </div>
+                    <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 text-center">
+                        <img class="crystalimg img-responsive" id="crystal3" src="assets/images/crystal3.png" alt="Crystal 3"/>
+                    </div>
+                    <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 text-center">
+                        <img class="crystalimg img-responsive" id="crystal4" src="assets/images/crystal4.png" alt="Crystal 4"/>
+                    </div>
+                </div>
+        
+                <div class="row">
+                    <div class="col-lg-12 directions">
+                        <p>Each crystal has a hidden value that will only be revealed when clicked. With each click, you will add the crystal's value to your total score. You will win the game if your total score matches the magic number, and you will lose if your total score exceeds it. Good luck.</p>
+                    </div>
+                </div>
+        
+                <div class="row text-center">
+                    <div class="col-lg-4 total">
+                        <h3>TOTAL SCORE:</h3>
+                        <h3 id="totalScore"></h3>
+                    </div>
+                    <div class="col-lg-4 button">
+                        <h3 id="winOrLose"></h3>
+                        <button type="button" class="btn btn-light btn-lg">PLAY AGAIN</button>
+                    </div>
+                    <div class="col-lg-4 scores">
+                        <p class="score">WINS: <span id="wins"></span></p> 
+                        <p class="score">LOSSES: <span id="losses"></span></p>
+                    </div>
+                </div>
+            </div>
+        
+
+        
+
+        
+        
+        
+        <script>
+            $(".header").delay(1000).animate({ opacity: 1 }, 600)
+            $(".container").delay(2000).animate({ opacity: 1 }, 700)
+            $(".directions").delay(3000).animate({opacity: 1 }, 700)
+            // $('#helloworld').className += ' fade-out';
+            //     $(function() {
+            //         $('#helloworld').removeClass('fade-out');
+            //     });
+            
+        </script> 
+    
+</body>
+</html>

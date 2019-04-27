@@ -10,6 +10,17 @@ html {
 	background-attachment: scroll;
 } */
 
+@import url(//db.onlinewebfonts.com/c/735509e0bf5184ea990116fc3ab9928c?family=lois+Cesarano);
+
+@font-face {font-family: "lois Cesarano";
+    src: url("//db.onlinewebfonts.com/t/735509e0bf5184ea990116fc3ab9928c.eot");
+    src: url("//db.onlinewebfonts.com/t/735509e0bf5184ea990116fc3ab9928c.eot?#iefix") format("embedded-opentype"),
+    url("//db.onlinewebfonts.com/t/735509e0bf5184ea990116fc3ab9928c.woff2") format("woff2"),
+    url("//db.onlinewebfonts.com/t/735509e0bf5184ea990116fc3ab9928c.woff") format("woff"),
+    url("//db.onlinewebfonts.com/t/735509e0bf5184ea990116fc3ab9928c.ttf") format("truetype"),
+    url("//db.onlinewebfonts.com/t/735509e0bf5184ea990116fc3ab9928c.svg#lois Cesarano") format("svg");
+}
+
 h3 {
 	margin: 20px 0px 10px 0px;
 	letter-spacing: 3px;

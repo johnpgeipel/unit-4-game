@@ -10,7 +10,60 @@
     <link rel="stylesheet" type="text/css" href="assets/css/style.css"/>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script type="text/javascript" src="assets/javascript/game.js"></script>
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+    <style>
+            
+        h1 {
+            color: white;
+            font-size: 50px;
+            text-align: center;
+            font-family: Lois Cesarano;
+            letter-spacing: 20px;
+            
+
+        }
+        .doodle {
+            position: fixed;
+            z-index: -5;
+        }
+
+            
+
+
+        .header {
+            text-align: center;
+            font-size: 50px;
+            font-family:Arial, Helvetica, sans-serif;
+            font-weight: bolder;
+            font-style: italic;
+            letter-spacing: 60px;
+            line-height: 60px;
+            color: white;
+            padding-top: 30px;
+            text-shadow: 10px 10px 3px rgba(21, 13, 31, 0.842);
+
+
+        }
+        .header {
+            opacity:0;
+            transition: opacity 2s;
+            -webkit-transition: opacity 2s;
+            margin-top: 25px;
+            text-align: center;
+        }
+        .container {
+            opacity:0;
+            transition: opacity 2s;
+            -webkit-transition: opacity 2s;
+
+        }
+        .directions {
+            opacity:0;
+            transition: opacity 3s;
+            -webkit-transition: opacity 3s;
+
+        }
+    </style>
 
 
 </head>
@@ -102,9 +155,9 @@
             </div>  
         
         <script>
-            // $(".header").delay(1000).animate({ opacity: 1 }, 600)
-            // $(".container").delay(2000).animate({ opacity: 1 }, 700)
-            // $(".directions").delay(3000).animate({opacity: 1 }, 700)
+            $(".header").delay(1000).animate({ opacity: 1 }, 600)
+            $(".container").delay(2000).animate({ opacity: 1 }, 700)
+            $(".directions").delay(3000).animate({opacity: 1 }, 700)
            
             
         </script> 

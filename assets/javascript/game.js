@@ -1,3 +1,8 @@
+$(".header").delay(1000).animate({ opacity: 1 }, 600)
+$(".container").delay(2000).animate({ opacity: 1 }, 700)
+$(".directions").delay(3000).animate({opacity: 1 }, 700)
+
+
 $(document).ready(function() {
 	var magicNumber;
 	var totalScore = 0;

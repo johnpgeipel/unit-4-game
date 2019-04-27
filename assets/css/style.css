@@ -2,13 +2,7 @@ html {
 	box-sizing: border-box;
 }
 
-/* body { 
-	min-height: 100vh;
-    background: url("../images/geobackground.png");
-    background-size: cover;
-	background-repeat: no-repeat;
-	background-attachment: scroll;
-} */
+
 
 @import url(//db.onlinewebfonts.com/c/735509e0bf5184ea990116fc3ab9928c?family=lois+Cesarano);
 
@@ -26,20 +20,18 @@ h3 {
 	letter-spacing: 3px;
 }
 
-/* .header {
-	padding: 70px 0px 0px 0px;
-	color: grey; */
-/* } */
+
 
 h1, h3, #magicNumber, #totalScore, #wins, #losses, .score {
 	color: white;
 }
 
-/* h1 {
-	color: black;
-	margin: 55px 0px 75px 0px;
-	letter-spacing: 12px; */
-/* } */
+#magicNumber {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 20px;
+}
+
+
 
 .crystalimg {
 	width: 150px;
@@ -60,9 +52,7 @@ h1, h3, #magicNumber, #totalScore, #wins, #losses, .score {
 	letter-spacing: 3px;
 }
 
-/*.directions {
-	
-}*/
+
 
 #winOrLose {
 	color: #ec8c53;
@@ -70,6 +60,7 @@ h1, h3, #magicNumber, #totalScore, #wins, #losses, .score {
 
 .total, .scores, .directions {
 	margin: auto;
+	
 }
 
 .btn {
@@ -85,6 +76,61 @@ h1, h3, #magicNumber, #totalScore, #wins, #losses, .score {
 	
 
 }
+
+
+h1 {
+	color: white;
+	font-size: 50px;
+	text-align: center;
+	font-family: Lois Cesarano;
+	letter-spacing: 20px;
+	
+
+}
+.doodle {
+	position: fixed;
+	z-index: -5;
+}
+
+	
+
+
+.header {
+	text-align: center;
+	font-size: 50px;
+	font-family:Arial, Helvetica, sans-serif;
+	font-weight: bolder;
+	font-style: italic;
+	letter-spacing: 60px;
+	line-height: 60px;
+	color: white;
+	padding-top: 30px;
+	text-shadow: 10px 10px 3px rgba(21, 13, 31, 0.842);
+
+
+}
+.header {
+	opacity:0;
+	transition: opacity 2s;
+	-webkit-transition: opacity 2s;
+	margin-top: 25px;
+	text-align: center;
+}
+.container {
+	opacity:0;
+	transition: opacity 2s;
+	-webkit-transition: opacity 2s;
+
+}
+.directions {
+	opacity:0;
+	transition: opacity 3s;
+	-webkit-transition: opacity 3s;
+
+}
+
+
+
 
 
 

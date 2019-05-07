@@ -103,7 +103,7 @@ h1, h3, #magicNumber, #totalScore, #wins, #losses, .score {
 
 }
 
-@media screen and (max-width: 520px) {
+@media screen and (max-width: 540px) {
 	.crystalimg {
 		width: 75px !important;
 		display: -moz-inline-grid !important;

@@ -4,25 +4,9 @@ html {
 
 
 
-@import url(//db.onlinewebfonts.com/c/735509e0bf5184ea990116fc3ab9928c?family=lois+Cesarano);
-
-@font-face {font-family: "lois Cesarano";
-    src: url("//db.onlinewebfonts.com/t/735509e0bf5184ea990116fc3ab9928c.eot");
-    src: url("//db.onlinewebfonts.com/t/735509e0bf5184ea990116fc3ab9928c.eot?#iefix") format("embedded-opentype"),
-    url("//db.onlinewebfonts.com/t/735509e0bf5184ea990116fc3ab9928c.woff2") format("woff2"),
-    url("//db.onlinewebfonts.com/t/735509e0bf5184ea990116fc3ab9928c.woff") format("woff"),
-    url("//db.onlinewebfonts.com/t/735509e0bf5184ea990116fc3ab9928c.ttf") format("truetype"),
-    url("//db.onlinewebfonts.com/t/735509e0bf5184ea990116fc3ab9928c.svg#lois Cesarano") format("svg");
-}
-h1 {
-	color: white;
-	font-size: 50px;
-	text-align: center;
-	font-family: Lois Cesarano;
-	letter-spacing: 20px;
 	
 
-}
+
 .header {
 	text-align: center;
 	font-size: 50px;
@@ -119,10 +103,10 @@ h1, h3, #magicNumber, #totalScore, #wins, #losses, .score {
 
 }
 
-@media screen and (max-width: 380px) {
+@media screen and (max-width: 520px) {
 	.crystalimg {
-		width: 75px;
-		display: -moz-inline-grid;
+		width: 75px !important;
+		display: -moz-inline-grid !important;
 		
 	}
 	.col-xs-6 {

@@ -21,6 +21,7 @@ h1 {
 .doodle {
 	position: fixed;
 	z-index: -5;
+	overflow: hidden;
 	}
 
 .header {
